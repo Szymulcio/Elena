@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "CenturyGothic";
+  src: url("CenturyGothic-Regular.ttf");
+}
+
+$main-font: "CenturyGothic", sans-serif;
 $logo-size: 8rem;
 $burger-size: 50px;
 
@@ -14,8 +20,20 @@ $burger-size: 50px;
   box-sizing: border-box;
 }
 
+body {
+  font-family: $main-font;
+  display: grid;
+  grid-template-rows: $logo-size auto auto fit-content(8rem);
+  grid-template-areas:
+    "header"
+    "menu"
+    "main"
+    "footer";
+  padding: 0;
+}
+
 .main-header {
-  height: $logo-size + 1;
+  height: $logo-size;
   width: 100%;
   position: fixed;
   top: 0;
@@ -38,35 +56,6 @@ $burger-size: 50px;
   @media (min-width: 40rem) {
     margin: auto;
   }
-}
-
-.main-nav {
-  display: none;
-}
-
-.mobile-nav {
-  position: absolute;
-  z-index: -1;
-  transform: translateZ(-100%);
-  transition: transform 300ms ease-out, margin-top 300ms;
-}
-
-.mobile-nav__items {
-  display: flex;
-  flex-direction: column;
-}
-
-.open-nav {
-  display: block !important;
-  opacity: 1 !important;
-  transform: translateZ(0) !important;
-  margin-top: $logo-size + 1;
-}
-
-main {
-  margin-top: $logo-size + 1;
-  padding: 50px;
-  background-color: aqua;
 }
 
 .toggle-button {
@@ -119,4 +108,35 @@ main {
 
 .toggle-button.open-burger .toggle-button__burger::after {
   transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.mobile-nav {
+  display: none;
+  opacity: 0;
+  transition: all 300ms ease-out;
+}
+
+.mobile-nav__items {
+  display: flex;
+  flex-direction: column;
+}
+
+.open-nav {
+  display: block !important;
+  grid-area: menu;
+  opacity: 1;
+}
+
+.main-nav {
+  display: none;
+}
+
+main {
+  padding: 50px;
+  background-color: aqua;
+  grid-area: main;
+}
+
+footer {
+  grid-area: footer;
 }
