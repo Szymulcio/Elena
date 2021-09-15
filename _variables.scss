@@ -1,0 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/fonts/CenturyGothic-Regular.ttf");
+
+  font-family: "Century Gothic Italic";
+  src: url("/fonts/CenturyGothic-Italic.ttf");
+}
+
+$fonts: (
+  main: (
+    "Century Gothic",
+    sans-serif,
+  ),
+  secondary: (
+    "Parisienne",
+    cursive,
+  ),
+);
+$main-color: #fcd8d4;
+$secondary-color: #fdefef;
+$logo-size: 8rem;
+$burger-size: 50px;

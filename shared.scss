@@ -1,0 +1,16 @@
+@import "variables";
+@import "typography";
+@import "header";
+@import "navigation";
+@import "footer";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: map-get($fonts, main);
+  font-size: 18px;
+}

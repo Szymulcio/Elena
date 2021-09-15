@@ -1,0 +1,79 @@
+@mixin burger() {
+  width: 50px;
+  height: 4px;
+  background: #272727;
+  border-radius: 2px;
+}
+
+.main-header {
+  height: $logo-size;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 40rem) {
+    justify-content: space-between;
+  }
+}
+
+.main-header__logo {
+  text-decoration: none;
+  margin: auto;
+
+  img {
+    height: $logo-size;
+  }
+
+  @media (min-width: 40rem) {
+    margin: auto;
+  }
+}
+
+.toggle-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.toggle-button__burger {
+  @include burger();
+  transition: all 0.5s ease-in-out;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    @include burger();
+    transition: all 0.5s ease-in-out;
+  }
+
+  &::before {
+    transform: translateY(-16px);
+  }
+
+  &::after {
+    transform: translateY(16px);
+  }
+}
+
+.toggle-button.open-burger .toggle-button__burger {
+  transform: translateX(-50px);
+  background: transparent;
+
+  &::before {
+    transform: rotate(45deg) translate(35px, -35px);
+  }
+
+  &::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+  }
+}

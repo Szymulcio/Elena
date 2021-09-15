@@ -1,5 +1,6 @@
 const toggleButton = document.querySelector(".toggle-button");
 const mobileNav = document.querySelector(".mobile-nav");
+const mainHeader = document.querySelector(".main-header");
 let menuOpen = false;
 
 toggleButton.addEventListener("click", () => {
@@ -11,6 +12,13 @@ toggleButton.addEventListener("click", () => {
     toggleButton.classList.remove("open-burger");
     mobileNav.classList.remove("open-nav");
     menuOpen = false;
+  }
+
+  let panel1 = mainHeader.nextElementSibling;
+  if (panel1.style.maxHeight) {
+    panel1.style.maxHeight = null;
+  } else {
+    panel1.style.maxHeight = panel1.scrollHeight + "px";
   }
 });
 
