@@ -1,0 +1,60 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/fonts/CenturyGothic-Regular.ttf");
+  font-family: "Century Gothic Italic";
+  src: url("/fonts/CenturyGothic-Italic.ttf");
+}
+body {
+  /*display: grid;
+  grid-template-rows: auto auto 10rem fit-content(8rem);
+  grid-template-areas:
+    "header"
+    "navbar"
+    "main"
+    "footer"; */
+}
+
+.faq__main {
+  grid-area: main;
+  transition: all 300ms ease-out;
+}
+
+/*  IMG Card  */
+.faq__card {
+  background: url(../images/faq__image.jpg) 25% 25%/cover;
+  height: 40vh;
+  width: 100vw;
+  position: relative;
+  margin: auto;
+}
+.faq__card h1 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+}
+.faq__card h2 {
+  width: 50%;
+  position: absolute;
+  top: 20%;
+  left: 5%;
+}
+
+/*  FAQ Questions */
+.faq__content {
+  margin: 2rem 1rem;
+}
+.faq__questions {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.faq__question {
+  list-style: none;
+  margin: 1rem 0;
+  font-size: 1.25rem;
+}
+
+/*  FAQ Answers */
+
+/*# sourceMappingURL=faq.css.map */

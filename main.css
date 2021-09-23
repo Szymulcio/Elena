@@ -1,5 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Parisienne&display=swap");
+@font-face {
+  font-family: "Century Gothic";
+  src: url("/fonts/CenturyGothic-Regular.ttf");
+  font-family: "Century Gothic Italic";
+  src: url("/fonts/CenturyGothic-Italic.ttf");
+}
 main {
   background: #fdefef;
+  height: 80vh;
   padding: 50px;
   transition: all 300ms ease-out;
 }

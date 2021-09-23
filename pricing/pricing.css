@@ -1,0 +1,65 @@
+.pricing__main {
+  width: 100%;
+}
+@media (min-width: 50rem) {
+  .pricing__main {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.pricing-card {
+  width: 90%;
+  height: 50vh;
+  border-radius: 5px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+  margin: 2rem auto;
+  text-align: center;
+}
+@media (min-width: 50rem) {
+  .pricing-card {
+    width: 30%;
+  }
+}
+.pricing-card__logo {
+  width: 128px;
+  height: 128px;
+  margin: auto;
+  padding: 1.5rem;
+}
+.pricing-card__title {
+  margin: 1rem;
+}
+.pricing-card__title h1 {
+  margin: 1rem;
+}
+.pricing-card__title h2 {
+  color: #858585;
+}
+.pricing-card__content {
+  margin: 1rem;
+}
+.pricing-card__items {
+  list-style: none;
+}
+.pricing-card__item {
+  list-style: none;
+  margin: 0.5rem;
+}
+.pricing-card .pricing-card__btn {
+  border-radius: 1px;
+  color: #000000;
+  font-size: 1rem;
+  font-family: inherit;
+  padding: 0.5rem;
+  background-color: #ffffff;
+  box-shadow: 1px 1px 20px 0 #645f5f77;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  text-align: center;
+}
+
+/*# sourceMappingURL=pricing.css.map */

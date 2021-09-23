@@ -10,7 +10,11 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: map-get($fonts, main);
-  font-size: 18px;
+  height: 100%;
 }

@@ -1,16 +1,18 @@
 .mobile-nav {
+  grid-area: navbar;
   opacity: 0;
   transition: opacity 1000ms ease-out, max-height 0.4s ease-out;
   margin-top: $logo-size;
   max-height: 0;
   overflow: hidden;
+  z-index: 5;
 
   &__items {
     width: 100%;
     display: flex;
     flex-direction: column;
     list-style: none;
-    padding: 1rem 0;
+    margin: 1rem 0;
   }
 
   &__item {

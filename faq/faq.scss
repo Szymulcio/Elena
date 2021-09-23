@@ -1,0 +1,61 @@
+@import "../variables";
+@import "../typography";
+
+body {
+  /*display: grid;
+  grid-template-rows: auto auto 10rem fit-content(8rem);
+  grid-template-areas:
+    "header"
+    "navbar"
+    "main"
+    "footer"; */
+}
+
+.faq__main {
+  grid-area: main;
+  transition: all 300ms ease-out;
+}
+
+/*  IMG Card  */
+
+.faq__card {
+  background: url(../images/faq__image.jpg) 25% 25% / cover;
+  height: 40vh;
+  width: 100vw;
+  position: relative;
+  margin: auto;
+
+  h1 {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+  }
+
+  h2 {
+    width: 50%;
+    position: absolute;
+    top: 20%;
+    left: 5%;
+  }
+}
+
+/*  FAQ Questions */
+
+.faq {
+  &__content {
+    margin: 2rem 1rem;
+  }
+
+  &__questions {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  &__question {
+    list-style: none;
+    margin: 1rem 0;
+    font-size: 1.25rem;
+  }
+}
+
+/*  FAQ Answers */

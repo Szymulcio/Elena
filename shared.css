@@ -6,14 +6,16 @@
   src: url("/fonts/CenturyGothic-Italic.ttf");
 }
 .main-header {
-  height: 8rem;
+  height: 5rem;
   width: 100%;
   position: fixed;
+  z-index: 10;
   top: 0;
   left: 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background: whitesmoke;
 }
 @media (min-width: 40rem) {
   .main-header {
@@ -26,7 +28,7 @@
   margin: auto;
 }
 .main-header__logo img {
-  height: 8rem;
+  height: 5rem;
 }
 @media (min-width: 40rem) {
   .main-header__logo {
@@ -80,18 +82,20 @@
 }
 
 .mobile-nav {
+  grid-area: navbar;
   opacity: 0;
   transition: opacity 1000ms ease-out, max-height 0.4s ease-out;
-  margin-top: 8rem;
+  margin-top: 5rem;
   max-height: 0;
   overflow: hidden;
+  z-index: 5;
 }
 .mobile-nav__items {
   width: 100%;
   display: flex;
   flex-direction: column;
   list-style: none;
-  padding: 1rem 0;
+  margin: 1rem 0;
 }
 .mobile-nav__item {
   padding: 0.5rem 1rem;
@@ -144,11 +148,17 @@
   display: none;
 }
 
+footer {
+  grid-area: footer;
+}
+
 .footer-message {
   text-align: center;
-  padding: 1rem;
-  font-family: "Parisienne", cursive;
-  font-size: 1.5rem;
+  margin: 2rem auto;
+  font-family: "Cormorant", serif;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
 }
 
 .contact-info {
@@ -171,9 +181,13 @@
   box-sizing: border-box;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Century Gothic", sans-serif;
-  font-size: 18px;
+  height: 100%;
 }
 
 /*# sourceMappingURL=shared.css.map */
